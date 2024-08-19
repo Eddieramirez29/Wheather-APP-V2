@@ -43,5 +43,11 @@ body {
     height: 20vh;
     width: 66.5vw;
     position: relative;
+    top: 0vh;
     left: 0vw;
+}
+
+#time
+{
+    color: white;
 }
