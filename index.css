@@ -47,7 +47,18 @@ body {
     left: 0vw;
 }
 
-#time, #date
+#date
 {
     color: white;
+    position: relative;
+    left: 48vw;
+    top: 7vh;
+}
+
+#time
+{
+    color: white;
+    position: relative;
+    left: 62vw;
+    top: 4vh;
 }
