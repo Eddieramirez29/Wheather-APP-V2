@@ -38,13 +38,18 @@ body {
 
 .main-container .main-container_header
 {
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     background-color: black;
     height: 20vh;
     width: 66.5vw;
     position: relative;
     top: 0vh;
     left: 0vw;
+}
+
+#temperature
+{
+    color: aliceblue;
 }
 
 #date
