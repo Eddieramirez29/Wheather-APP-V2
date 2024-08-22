@@ -5,10 +5,10 @@ function extraerCoordenadasDeCiudad()
 {
     return new Promise((resolve, reject) => {
         const arregloDatos = [];
-        const inputElement = document.getElementById("myCity");
-        const city = inputElement.value;
-        const apiUrlCity = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=5&appid=" + apiKey;
-
+        // const inputElement = document.getElementById("myCity");
+        // const city = inputElement.value;
+        const apiUrlCity = "http://api.openweathermap.org/geo/1.0/direct?q=" + currentCity + "&limit=5&appid=" + apiKey;
+      console.log(apiUrlCity);
         fetch(apiUrlCity)
             .then((response) => {
                 if (!response.ok) {
@@ -33,7 +33,8 @@ function extraerCoordenadasDeCiudad()
     });
 }
 
-function extraerTemperatura() {
+function extraerTemperatura()
+{
     extraerCoordenadasDeCiudad()
         .then((datosArreglo) => {
             let latitud = datosArreglo[0];
