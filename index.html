@@ -13,12 +13,11 @@
             <div id="time"></div>
         </header>
         <aside class="main-container_side">
-            <label>Your city: </label>
+            <button onclick="extraerTemperatura()"><img src="./images/locationIcon.png" alt="" height="12px" width="20px"></button>
             <input type="text" id="myCity" />
-            <button onclick="extraerTemperatura()">Get location</button>
             <button onclick="extraerTemperatura()">Search</button>
+            <div id="location"></div>
             <div id="temperature"></div>
-            <div id="location">Location</div>
     <div id="weather-icon">
         <!--Imágenes agregadas dinámicamente-->
     </div>
@@ -37,7 +36,7 @@
     <script src="./city.js"></script> -->
 
     <script src="./scr/time.js"></script>
-    <script src="./scr/location.js"></script>
+    <!-- <script src="./scr/location.js"></script> -->
     <script src="./scr/API.js"></script>
     
 </body>

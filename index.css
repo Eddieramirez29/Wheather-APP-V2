@@ -24,6 +24,11 @@ body {
     
 }
 
+label
+{
+    color: aliceblue;
+}
+
 
 .main-container .main-container_side
 {
@@ -32,7 +37,7 @@ body {
     height: 87vh;
     width: 22.5vw;
     position: relative;
-    bottom: 21vh;
+    bottom: 20vh;
     left: 66vw;
 }
 
@@ -47,9 +52,13 @@ body {
     left: 0vw;
 }
 
-#temperature
+#temperature, #location
 {
+    position: relative;
+    left: 25%;
+    top: 25px;
     color: aliceblue;
+    font-size: 50px;
 }
 
 #location
