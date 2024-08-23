@@ -1,16 +1,31 @@
 // URL de la API que deseas consumir
 const apiKey = "01a559aa6308b0d2d3ff65f1699f4e9d";
 
+
+
 function extraerCoordenadasDeCiudad()
 {
+  let location = "";
     return new Promise((resolve, reject) => {
-        const arregloDatos = [];
-        const inputElement = document.getElementById("myCity");
-        const city = inputElement.value;
+      const arregloDatos = [];
+      const inputElement = document.getElementById("myCity");
+      const city = inputElement.value;
+      const locationText = document.getElementById("location");
 
-        
+      if(city === "")
+      {
+        location = currentCity;
+      }
+      else
+      {
+        location = city;
+        currentCity = "";
+      }
 
-        const apiUrlCity = "http://api.openweathermap.org/geo/1.0/direct?q=" + currentCity + "&limit=5&appid=" + apiKey;
+      locationText.innerText = location;
+
+
+        const apiUrlCity = "http://api.openweathermap.org/geo/1.0/direct?q=" + location + "&limit=5&appid=" + apiKey;
 
         fetch(apiUrlCity)
             .then((response) => {
