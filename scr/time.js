@@ -25,9 +25,21 @@ function getCurrentTimeAndDate()
     let month = now.getMonth();
     let day = now.getDay();
     let dayOfMonth = now.getDate(); // Obtiene el número del día del mes
+     // Check whether AM or PM
+     let newformat = hours >= 12 ? 'PM' : 'AM';
 
-    time.innerText = hours + ":" + minutes;
-    date.innerText = getDay[day] + ", " + dayOfMonth +" " + getMonth[month] + " " +year;
+     // Find current hour in AM-PM Format
+     hours = hours % 12;
+ 
+     // To display "0" as "12"
+     hours = hours ? hours : 12;
+     minutes = minutes < 10 ? '0' + minutes : minutes;
+    
+    //This makesures that 2 digits appear when showing the first 10 minutes(from 00 to 09)
+    minutes = minutes.toString().padStart(2, '0');
+
+    time.innerText = hours + ":" + minutes + " " + newformat;
+    date.innerText = getDay[day] + ", " + dayOfMonth +" " + getMonth[month] + " " + year;
 }
 
 

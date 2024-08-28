@@ -1,4 +1,5 @@
-body {
+body
+{
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,7 +9,9 @@ body {
     width: 100vw;
     box-sizing: border-box;
     background-color: black;
+    overflow: hidden; /* To avoid scrollbars appear */
 }
+
 
 /* Este código crea un borde que rodea todos los elementos y abarca toda la pantalla */
 .main-container
@@ -55,15 +58,23 @@ label
 #searchButton
 {
     position: relative;
-    left: 30%;
-    top: 25px;
+    left: -35%;
+    top: 35px;
+}
+
+#getLocationAutomatally
+{
+    position: relative;
+    left: 5%;
+    border: none;
+    border-radius: 5px;
 }
 
 #temperature, #location
 {
     position: relative;
-    left: 25%;
-    top: 25px;
+    left: 35%;
+    top: 75px;
     color: aliceblue;
     font-size: 35px;
 }
@@ -77,14 +88,32 @@ label
 {
     color: white;
     position: relative;
-    left: 48vw;
+    left: 0vw;
     top: 7vh;
+    font-size: 35px;
 }
 
 #time
 {
     color: white;
     position: relative;
-    left: 62vw;
-    top: 4vh;
+    left: 50svw;
+    top: 0vh;
+    font-size: 35px;
+}
+
+#myCity
+{
+    position: relative;
+    left: 15%;
+    border-radius: 5px;
+    border: none;
+}
+
+
+#weather-icon
+{
+    position: relative;
+    left: 35%;
+    top: 40%;
 }

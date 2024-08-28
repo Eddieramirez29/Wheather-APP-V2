@@ -5,6 +5,7 @@ const apiKey = "01a559aa6308b0d2d3ff65f1699f4e9d";
 
 function extraerCoordenadasDeCiudad()
 {
+  
   let location = "";
     return new Promise((resolve, reject) => {
       const arregloDatos = [];
