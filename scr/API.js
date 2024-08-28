@@ -1,5 +1,6 @@
 // URL de la API que deseas consumir
 const apiKey = "01a559aa6308b0d2d3ff65f1699f4e9d";
+const weatherDescriptionState = document.getElementById("weatherDescriptionMain")
 
 
 
@@ -107,67 +108,54 @@ function getIcon(iconId)
   const weatherIconContainer = document.getElementById("weather-icon");
 
   // Lógica para cargar imágenes según el valor de iconId
-  if (iconId >= 200 && iconId <= 232)
-  {
-    iconImage.src = "../scr/Icons/Group 2xx Thunderstorm/11d@2x.png";
+if (iconId >= 200 && iconId <= 232) {
+  iconImage.src = "../scr/Icons/Group 2xx Thunderstorm/11d@2x.png";
+  weatherDescriptionState.innerText = "Relámpagos y tormentas eléctricas";
+} else if (iconId >= 300 && iconId <= 321) {
+  iconImage.src = "../scr/Icons/Group 3xx Drizzle/09d@2x.png";
+  weatherDescriptionState.innerText = "Llovizna ligera o chubascos";
+} else if (iconId >= 500 && iconId <= 531) {
+  if (iconId >= 500 && iconId <= 504) {
+    iconImage.src = "../scr/Icons/Group 5xx Rain/10d@2x.png";
+    weatherDescriptionState.innerText = "Lluvia ligera o moderada";
+  } else if (iconId == 511) {
+    iconImage.src = "../scr/Icons/Group 5xx Rain/13d@2x.png";
+    weatherDescriptionState.innerText = "Lluvia congelante";
+  } else {
+    iconImage.src = "../scr/Icons/Group 5xx Rain/09d@2x.png";
+    weatherDescriptionState.innerText = "Lluvias intensas o aguaceros";
   }
-  else if (iconId >= 300 && iconId <= 321)
-  {
-    iconImage.src = "../scr/Icons/Group 3xx Drizzle/09d@2x.png";
+} else if (iconId >= 600 && iconId <= 622) {
+  iconImage.src = "../scr/Icons/Group 6xx Snow/13d@2x.png";
+  weatherDescriptionState.innerText = "Nevadas o chubascos de nieve";
+} else if (iconId >= 701 && iconId <= 781) {
+  iconImage.src = "../scr/Icons/Group 7xx Atmosphere/50d@2x.png";
+  weatherDescriptionState.innerText = "Neblina, humo, polvo, niebla, arena, etc.";
+} else if (iconId == 800) {
+  iconImage.src = "../scr/Icons/Group 800 Clear/01d@2x.png";
+  weatherDescriptionState.innerText = "Cielo claro";
+} else if (iconId >= 801 && iconId <= 804) {
+  if (iconId == 801) {
+    iconImage.src = "../scr/Icons/Group 80x Clouds/02d@2x.png";
+    weatherDescriptionState.innerText = "Pocas nubes";
+  } else if (iconId == 802) {
+    iconImage.src = "../scr/Icons/Group 80x Clouds/03d@2x.png";
+    weatherDescriptionState.innerText = "Nubes dispersas";
+  } else if (iconId == 803) {
+    iconImage.src = "../scr/Icons/Group 80x Clouds/04d@2x.png";
+    weatherDescriptionState.innerText = "Nubes fragmentadas";
+  } else {
+    iconImage.src = "../scr/Icons/Group 80x Clouds/04d@2x.png";
+    weatherDescriptionState.innerText = "Cielo cubierto";
+    document.body.className = 'thunderstorm';
   }
-  else if (iconId >= 500 && iconId <= 531)
-  {
-    if (iconId >= 500 && iconId <= 504)
-    {
-      iconImage.src = "../scr/Icons/Group 5xx Rain/10d@2x.png";
-    }
-    else if (iconId == 511)
-    {
-      iconImage.src = "../scr/Icons/Group 5xx Rain/13d@2x.png";
-    }
-    else
-    {
-      iconImage.src = "../scr/Icons/Group 5xx Rain/09d@2x.png";
-    }
-  }
-  else if (iconId >= 600 && iconId <= 622)
-  {
-    iconImage.src = "../scr/Icons/Group 6xx Snow/13d@2x.png";
-  }
-  else if (iconId >= 701 && iconId <= 781)
-  {
-    iconImage.src = "../scr/Icons/Group 7xx Atmosphere/50d@2x.png";
-  }
-  else if (iconId == 800)
-  {
-    iconImage.src = "../scr/Icons/Group 800 Clear/01d@2x.png";
-  }
-  else if (iconId >= 801 && iconId <= 804)
-  {
-    if (iconId == 801)
-    {
-      iconImage.src = "../scr/Icons/Group 80x Clouds/02d@2x.png";
-    }
-    else if (iconId == 802)
-    {
-      iconImage.src = "../scr/Icons/Group 80x Clouds/03d@2x.png";
-    }
-    else if (iconId == 803)
-    {
-      iconImage.src = "../scr/Icons/Group 80x Clouds/04d@2x.png";
-    }
-    else
-    {
-      iconImage.src = "../scr/Icons/Group 80x Clouds/04d@2x.png";
-    }
-  }
+}
   else
   {
     // Si iconId no coincide con ningún caso, puedes manejarlo aquí
     // Por ejemplo, cargar una imagen predeterminada o mostrar un mensaje de error
     iconImage.src = "../scr/Images/default.jpg"; // Ruta de la imagen predeterminada
   }
-
   console.log("Datos :): " + iconId);
   // Reemplaza el contenido existente del contenedor con el nuevo elemento
   weatherIconContainer.innerHTML = "";
