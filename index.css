@@ -76,18 +76,15 @@ label
     position: relative;
     left: 35%;
     top: 75px;
-    color: aliceblue;
+    color: black;
     font-size: 35px;
 }
 
-#location
-{
-    color: aliceblue;
-}
+
 
 #date
 {
-    color: white;
+    color: black;
     position: relative;
     left: 0vw;
     top: 7vh;
@@ -96,7 +93,7 @@ label
 
 #time
 {
-    color: white;
+    color: black;
     position: relative;
     left: 50svw;
     top: 0vh;
@@ -123,7 +120,7 @@ label
 {
     position: absolute;
     top: 50%;
-    color: aliceblue;
+    color: black;
     font-size: 35px;
 }
 

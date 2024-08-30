@@ -53,7 +53,6 @@ async function getLocation()
         console.error('Error when getting data:', error);
     }
 }
-
 getLocation();
 
 

@@ -167,9 +167,11 @@ if (iconId >= 200 && iconId <= 232) {
     // Si iconId no coincide con ningún caso, puedes manejarlo aquí
     // Por ejemplo, cargar una imagen predeterminada o mostrar un mensaje de error
     iconImage.src = "../scr/Images/default.jpg"; // Ruta de la imagen predeterminada
+    
   }
   console.log("Datos :): " + iconId);
   // Reemplaza el contenido existente del contenedor con el nuevo elemento
   weatherIconContainer.innerHTML = "";
   weatherIconContainer.appendChild(iconImage);
 }
+
