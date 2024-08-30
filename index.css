@@ -127,7 +127,51 @@ label
     font-size: 35px;
 }
 
-.thunderstorm
-{
-    background-image: url('./istockphoto-1455038582-1024x1024.jpg');
+
+.thunderstorm {
+    background-image: url('./scr/Images/Group 2xx Thunderstorm/11d@2x.jpg');
+}
+
+.drizzle {
+    background-image: url('./scr/Images/Group 3xx Drizzle/09d@2x.jpg');
+}
+
+.light-rain {
+    background-image: url('./scr/Images/Group 5xx Rain/10d@2x.jpg');
+}
+
+.freezing-rain {
+    background-image: url('./scr/Images/Group 5xx Rain/13d@2x.jpg');
+}
+
+.heavy-rain {
+    background-image: url('./scr/Images/Group 5xx Rain/09d@2x.jpg');
+}
+
+.snow {
+    background-image: url('./scr/Images/Group 6xx Snow/13d@2x.jpg');
+}
+
+.atmosphere {
+    background-image: url('./scr/Images/Group 7xx Atmosphere/50d@2x.jpg');
+}
+
+.clear-sky {
+    background-image: url('./scr/Images/Group 800 Clear/01d@2x.jpg');
+}
+
+.few-clouds {
+    background-image: url('./scr/Images/Group 80x Clouds/02d@2x.jpg');
+}
+
+.scattered-clouds {
+    background-image: url('./scr/Images/Group 80x Clouds/03d@2x.jpg');
+}
+
+.broken-clouds {
+    background-image: url('./scr/Images/Group 80x Clouds/04d@2x.jpg');
+}
+
+.overcast {
+    background-image: url('./scr/Images/Group 80x Clouds/04d@2x.jpg');
 }

@@ -107,49 +107,61 @@ function getIcon(iconId)
   // Obtiene el elemento contenedor donde deseas agregar la imagen
   const weatherIconContainer = document.getElementById("weather-icon");
 
-  // Lógica para cargar imágenes según el valor de iconId
+// Logic to load images based on the value of iconId
 if (iconId >= 200 && iconId <= 232) {
   iconImage.src = "../scr/Icons/Group 2xx Thunderstorm/11d@2x.png";
-  weatherDescriptionState.innerText = "Relámpagos y tormentas eléctricas";
+  weatherDescriptionState.innerText = "Thunderstorms and lightning";
+  document.body.className = 'thunderstorm';  // Thunderstorm
 } else if (iconId >= 300 && iconId <= 321) {
   iconImage.src = "../scr/Icons/Group 3xx Drizzle/09d@2x.png";
-  weatherDescriptionState.innerText = "Llovizna ligera o chubascos";
+  weatherDescriptionState.innerText = "Light drizzle or showers";
+  document.body.className = 'drizzle';  // Drizzle
 } else if (iconId >= 500 && iconId <= 531) {
   if (iconId >= 500 && iconId <= 504) {
     iconImage.src = "../scr/Icons/Group 5xx Rain/10d@2x.png";
-    weatherDescriptionState.innerText = "Lluvia ligera o moderada";
+    weatherDescriptionState.innerText = "Light to moderate rain";
+    document.body.className = 'light-rain';  // Light Rain
   } else if (iconId == 511) {
     iconImage.src = "../scr/Icons/Group 5xx Rain/13d@2x.png";
-    weatherDescriptionState.innerText = "Lluvia congelante";
+    weatherDescriptionState.innerText = "Freezing rain";
+    document.body.className = 'freezing-rain';  // Freezing Rain
   } else {
     iconImage.src = "../scr/Icons/Group 5xx Rain/09d@2x.png";
-    weatherDescriptionState.innerText = "Lluvias intensas o aguaceros";
+    weatherDescriptionState.innerText = "Heavy rain or downpours";
+    document.body.className = 'heavy-rain';  // Heavy Rain
   }
 } else if (iconId >= 600 && iconId <= 622) {
   iconImage.src = "../scr/Icons/Group 6xx Snow/13d@2x.png";
-  weatherDescriptionState.innerText = "Nevadas o chubascos de nieve";
+  weatherDescriptionState.innerText = "Snowfall or snow showers";
+  document.body.className = 'snow';  // Snow
 } else if (iconId >= 701 && iconId <= 781) {
   iconImage.src = "../scr/Icons/Group 7xx Atmosphere/50d@2x.png";
-  weatherDescriptionState.innerText = "Neblina, humo, polvo, niebla, arena, etc.";
+  weatherDescriptionState.innerText = "Fog, smoke, dust, mist, sand, etc.";
+  document.body.className = 'atmosphere';  // Atmosphere
 } else if (iconId == 800) {
   iconImage.src = "../scr/Icons/Group 800 Clear/01d@2x.png";
-  weatherDescriptionState.innerText = "Cielo claro";
+  weatherDescriptionState.innerText = "Clear sky";
+  document.body.className = 'clear-sky';  // Clear Sky
 } else if (iconId >= 801 && iconId <= 804) {
   if (iconId == 801) {
     iconImage.src = "../scr/Icons/Group 80x Clouds/02d@2x.png";
-    weatherDescriptionState.innerText = "Pocas nubes";
+    weatherDescriptionState.innerText = "Few clouds";
+    document.body.className = 'few-clouds';  // Few Clouds
   } else if (iconId == 802) {
     iconImage.src = "../scr/Icons/Group 80x Clouds/03d@2x.png";
-    weatherDescriptionState.innerText = "Nubes dispersas";
+    weatherDescriptionState.innerText = "Scattered clouds";
+    document.body.className = 'scattered-clouds';  // Scattered Clouds
   } else if (iconId == 803) {
     iconImage.src = "../scr/Icons/Group 80x Clouds/04d@2x.png";
-    weatherDescriptionState.innerText = "Nubes fragmentadas";
+    weatherDescriptionState.innerText = "Broken clouds";
+    document.body.className = 'broken-clouds';  // Broken Clouds
   } else {
     iconImage.src = "../scr/Icons/Group 80x Clouds/04d@2x.png";
-    weatherDescriptionState.innerText = "Cielo cubierto";
-    document.body.className = 'thunderstorm';
+    weatherDescriptionState.innerText = "Overcast sky";
+    document.body.className = 'overcast';  // Overcast Sky
   }
 }
+
   else
   {
     // Si iconId no coincide con ningún caso, puedes manejarlo aquí
